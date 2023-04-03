@@ -1,6 +1,14 @@
-<div *ngFor="let mission of missions">
+<!-- <div *ngFor="let mission of missions">
     <h2>{{ mission.mission_name }} ({{ mission.launch_year }})</h2>
     <p>{{ mission.details }}</p>
     <img src="{{ mission.links.mission_patch_small }}" alt="Mission Patch">
   </div>
-  
+   -->
+
+   <app-missionfilter (yearSelected)="filterByYear($event)"></app-missionfilter>
+
+<div *ngFor="let mission of filteredMissions">
+  <h2>{{ mission.mission_name }} ({{ mission.launch_year }})</h2>
+  <p>{{ mission.details }}</p>
+  <img src="{{ mission.links.mission_patch_small }}" alt="Mission Patch">
+</div>

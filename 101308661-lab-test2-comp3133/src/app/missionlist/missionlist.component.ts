@@ -23,6 +23,18 @@ export class MissionlistComponent implements OnInit {
   missions : Mission[] = [];
 
   constructor(private spaceXapiService: SpacexapiService, private router: Router) { }
+  filterByYear(year: string): void {
+    if (year) {
+      this.http.get<any[]>(`https://api.spacexdata.com/v3/launches?launch_year=${year}`).subscribe(data => {
+        this.missions = data;
+      });
+    } else {
+      this.http.get<any[]>('https://api.spacexdata.com/v3/launches').subscribe(data => {
+        this.missions = data;
+      });
+    }
+  }
+  
 
   ngOnInit(): void {
     this.spaceXapiService.allLaunch().subscribe(data => {

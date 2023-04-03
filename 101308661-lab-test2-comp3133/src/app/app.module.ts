@@ -9,13 +9,17 @@ import { AppComponent } from 'angular/src/app/app.component';
 import { MissionlistComponent } from './missionlist/missionlist.component';
 import { ModelsComponent } from './models/models.component';
 import { NetworkComponent } from './network/network.component';
+import { MissionfilterComponent } from './missionfilter/missionfilter.component';
+import { MissionDetailsComponent } from './mission-details/mission-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MissionlistComponent,
     ModelsComponent,
-    NetworkComponent
+    NetworkComponent,
+    MissionfilterComponent,
+    MissionDetailsComponent
   ],
   imports: [
     BrowserModule,
