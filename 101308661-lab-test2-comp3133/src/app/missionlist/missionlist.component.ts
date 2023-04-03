@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { SpacexapiService } from '../network/spacexapi.service';
 import { Mission } from '../models/mission';
+import { MissiondetailsComponent } from '../mission-details/mission-details.component';
+
 
 @Component({
   selector: 'app-missionlist',

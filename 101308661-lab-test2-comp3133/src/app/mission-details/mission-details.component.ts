@@ -4,10 +4,11 @@ import { Location } from '@angular/common';
 import { SpacexapiService } from '../network/spacexapi.service';
 import { Mission } from '../models/mission';
 
+
 @Component({
   selector: 'app-missiondetails',
-  templateUrl: './missiondetails.component.html',
-  styleUrls: ['./missiondetails.component.css'],
+  templateUrl: './mission-details.component.html', 
+  styleUrls: ['./mission-details.component.css'],
 })
 export class MissiondetailsComponent implements OnInit {
   mission: Mission = {
