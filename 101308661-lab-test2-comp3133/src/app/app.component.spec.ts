@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-// import { AppComponent } from './app.component';
 import { AppComponent } from '../app/app.component'
 
 describe('AppComponent', () => {
@@ -17,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title '101246661-lab-test2-comp3133'`, () => {
+  it(`should have as title '101308661-lab-test2-comp3133'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('101246661-lab-test2-comp3133');
+    expect(app.title).toEqual('101308661-lab-test2-comp3133');
   });
 
   it('should render title', () => {

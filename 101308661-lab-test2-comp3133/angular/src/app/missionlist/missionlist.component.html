@@ -1,1 +1,40 @@
-<p>missionlist works!</p>
+<h2>Mission List</h2>
+<ul>
+  <li *ngFor="let mission of missions">
+    <a routerLink="/details/{{ mission.flight_number }}">
+      <!-- <img src="{{ mission.links.mission_patch_small }}" alt="mission patch" /> -->
+      <div class="mission">
+        <div class="image">
+          <img src="{{ mission.links.mission_patch_small }}" alt="mission patch" width="100" />
+        </div>
+        <div class="details">
+          <h3>{{ mission.mission_name }}</h3>
+          <h4>{{ mission.launch_year }}</h4>
+        </div>
+      </div>
+      <p>{{ mission.details }}</p>
+      
+    </a>
+  </li>
+</ul>
+<button id="scrollup-button">Scroll Up</button>
+<script>
+  const scrollupButton = document.getElementById('scrollup-button');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    scrollupButton.style.display = 'block';
+  } else {
+    scrollupButton.style.display = 'none';
+  }
+});
+
+scrollupButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+</script>
+
