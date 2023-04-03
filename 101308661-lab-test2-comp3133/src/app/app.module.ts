@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 // import { AppComponent } from './app.component';
 import { AppComponent } from 'angular/src/app/app.component';
 import { MissionlistComponent } from './missionlist/missionlist.component';
+import { ModelsComponent } from './models/models.component';
+import { NetworkComponent } from './network/network.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MissionlistComponent
+    MissionlistComponent,
+    ModelsComponent,
+    NetworkComponent
   ],
   imports: [
     BrowserModule,
